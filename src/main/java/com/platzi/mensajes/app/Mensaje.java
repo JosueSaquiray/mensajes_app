@@ -11,14 +11,20 @@ package com.platzi.mensajes.app;
 public class Mensaje {
     private int id_mensaje;
     String mensaje;
-    String author_message;
-    String date_message;
+    String autor_mensaje;
+    String fecha_mensaje;
 
-    public Mensaje(String mensaje, String author_message, String date_message) {
+    public Mensaje(String mensaje, String autor_mensaje, String fecha_mensaje) {
         this.mensaje = mensaje;
-        this.author_message = author_message;
-        this.date_message = date_message;
+        this.autor_mensaje = autor_mensaje;
+        this.fecha_mensaje = fecha_mensaje;
     }
+
+    public Mensaje() {
+       
+    }
+
+    
     
 
     public int getId_mensaje() {
@@ -37,21 +43,23 @@ public class Mensaje {
         this.mensaje = mensaje;
     }
 
-    public String getAuthor_message() {
-        return author_message;
+    public String getAutor_mensaje() {
+        return autor_mensaje;
     }
 
-    public void setAuthor_message(String author_message) {
-        this.author_message = author_message;
+    public void setAutor_mensaje(String autor_mensaje) {
+        this.autor_mensaje = autor_mensaje;
     }
 
-    public String getDate_message() {
-        return date_message;
+    public String getFecha_mensaje() {
+        return fecha_mensaje;
     }
 
-    public void setDate_message(String date_message) {
-        this.date_message = date_message;
+    public void setFecha_mensaje(String fecha_mensaje) {
+        this.fecha_mensaje = fecha_mensaje;
     }
+
+    
             
     
     
