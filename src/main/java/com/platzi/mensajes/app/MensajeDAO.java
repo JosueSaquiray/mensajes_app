@@ -67,8 +67,13 @@ public class MensajeDAO {
             String query="DELETE FROM mensajes WHERE mensajes.id_mensaje= ?";
             ps=conexion.prepareStatement(query);
             ps.setInt(1, idMensaje);
-            ps.executeUpdate();
-            System.out.println("Mensaje con el id="+idMensaje+" eliminado");
+            int countRowsUpdated = ps.executeUpdate();
+            if (countRowsUpdated != 0) {
+                  System.out.println("Mensaje con el id="+idMensaje+" eliminado");
+            }else {
+                  System.out.println("No fue encontrado el mensaje con id="+idMensaje);
+            }
+            
             
         }catch(SQLException e){
             System.out.println(e);
