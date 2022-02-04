@@ -38,7 +38,10 @@ public class MensajeService {
         
     }
     public static void borrarMensaje(){
-        
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Escribe el id del mensaje que deseas eliminar: ");
+        int id=sc.nextInt();
+        MensajeDAO.borrarMensajesDB(id);
     }
     public static void editarMensaje(){
         
